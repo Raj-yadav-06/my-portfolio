@@ -12,7 +12,7 @@ function toggle(){
        toggleBtn[0].innerHTML = '<i class="fa-solid fa-sun"></i>';
        toggleBtn[1].style.color = "white";
        toggleBtn[1].innerHTML = '<i class="fa-solid fa-sun"></i>';
-       amazonImg.setAttribute("src","/images/drkAmazon.png");
+       amazonImg.setAttribute("src","images/drkAmazon.png");
        amazonImg.style.objectFit = "contain";
        mode.innerText = "Dark mode";
        value = "dark mode";
@@ -21,7 +21,7 @@ function toggle(){
         toggleBtn[0].innerHTML = '<i class="fa-solid fa-moon"></i>';
         toggleBtn[1].style.color = "#2C3E50";
         toggleBtn[1].innerHTML = '<i class="fa-solid fa-moon"></i>';
-        amazonImg.setAttribute("src","/images/amazon.png");
+        amazonImg.setAttribute("src","images/amazon.png");
         amazonImg.style.objectFit = "cover";
         value = "light mode";
         mode.innerText = "Light mode";
