@@ -528,6 +528,9 @@ stroke-width: 3;
 .project-container{
     flex-direction: column;
 }
+.project-container{
+    opacity: 1;
+}
 .project-card:hover{
     transform: none;
 
