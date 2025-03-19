@@ -100,7 +100,7 @@ if(entry.isIntersecting){
     const bars = entry.target.querySelectorAll(".bar-fill");
     bars.forEach(bar => {
         let percent = bar.dataset.percent;
-        console.log(percent);
+      
         bar.style.width = percent + "%";
     })
     // observer.unobserve(entry.target);
@@ -120,7 +120,7 @@ observe.observe(skillSection);
 observe.observe(aboutSection);
 observe.observe(projectSection);
 
-
+console.log("updated");
 
 // contact me 
 document.querySelector(".contact-form").addEventListener("submit",submitForm);
@@ -131,7 +131,7 @@ function submitForm(event) {
             from_email: document.querySelector('#email').value.trim(),
             message: document.querySelector('#message').value.trim()
     }
-
+console.log(formData);
     if(!formData.from_name || !formData.from_email || !formData.message){
         alert("Please fill out all fields before submitting.");
         return;
@@ -141,7 +141,7 @@ function submitForm(event) {
         console.log("Email Sent Successfully!", response);
 
         alert("Your message has been sent! ✅");
-        document.querySelector(".contact-form").reset();
+    
 
     })
     .catch(error => {
@@ -153,3 +153,4 @@ function submitForm(event) {
 
     })
 }
+
