@@ -119,3 +119,37 @@ if(entry.isIntersecting){
 observe.observe(skillSection);
 observe.observe(aboutSection);
 observe.observe(projectSection);
+
+
+
+// contact me 
+document.querySelector(".contact-form").addEventListener("submit",submitForm);
+function submitForm(event) {
+    event.preventDefault();
+    let formData = {
+        from_name: document.querySelector('#name').value.trim(),
+            from_email: document.querySelector('#email').value.trim(),
+            message: document.querySelector('#message').value.trim()
+    }
+
+    if(!formData.from_name || !formData.from_email || !formData.message){
+        alert("Please fill out all fields before submitting.");
+        return;
+    }
+    emailjs.send("service_c6tlszu","template_5zmfpzo",formData)
+    .then(response => {
+        console.log("Email Sent Successfully!", response);
+
+        alert("Your message has been sent! ✅");
+        document.querySelector(".contact-form").reset();
+
+    })
+    .catch(error => {
+        console.error("❌ Error sending email:", error);
+
+        console.log("Error sending email:", error);
+
+        alert("Failed to send message. Please try again.");
+
+    })
+}

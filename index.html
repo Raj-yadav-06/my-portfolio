@@ -316,10 +316,10 @@
         <h1>Contact me</h1>
     
         <form>
-            <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email"    name="email" placeholder="Your Email" required>
+                <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" id="submit">Send Message</button>
         </form>
     </div>
 </div>
@@ -329,7 +329,16 @@
 
 </section>
 
-    
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "BXgnqPgMLRQHwOgY-",
+      });
+   })();
+</script>   
 <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 <script src="script.js"></script>
 
