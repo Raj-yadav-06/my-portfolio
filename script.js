@@ -132,6 +132,7 @@ function submitForm(event) {
             message: document.querySelector('#message').value.trim()
     }
 console.log(formData);
+let form = document.querySelector("#form");
     if(!formData.from_name || !formData.from_email || !formData.message){
         alert("Please fill out all fields before submitting.");
         return;
@@ -141,7 +142,7 @@ console.log(formData);
         console.log("Email Sent Successfully!", response);
 
         alert("Your message has been sent! ✅");
-    
+    form.reset();
 
     })
     .catch(error => {
